@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "b8fbdb9a-611c-431a-afd2-c1092a15ecf1",
+		"name": "General Site testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Person",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"connor\",\r\n    \"email\": \"connor.kiesewetter@gmail.com\",\r\n    \"dob\": \"2019-10-22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/person?Name=West&dob=2017-05-15&email=west.kiesewetter@google.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					],
+					"query": [
+						{
+							"key": "Name",
+							"value": "West"
+						},
+						{
+							"key": "dob",
+							"value": "2017-05-15"
+						},
+						{
+							"key": "email",
+							"value": "west.kiesewetter@google.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Person",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/person?personId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					],
+					"query": [
+						{
+							"key": "personId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/person",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Person",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/person/1?name=Geoff&email=geoff@keep.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"person",
+						"1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Geoff"
+						},
+						{
+							"key": "email",
+							"value": "geoff@keep.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

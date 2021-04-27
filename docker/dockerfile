@@ -1,0 +1,2 @@
+From tomcat
+COPY /target/PeopleService-0.0.1-SNAPSHOT.jar /usr/local/tomcat/webapps/PeopleService-0.0.1-SNAPSHOT.jar
