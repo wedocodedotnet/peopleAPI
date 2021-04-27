@@ -18,7 +18,7 @@ Run the database with this command assuming you have docker installed:
     \du - show tables
 
 
-#Testing
+## Testing
 
     Simple availablity test from powershell
     iwr http://localhost:8080/api/v1/person -useb
